@@ -1,0 +1,30 @@
+header
+    width: 100%
+    +flex-center
+
+    .container
+        +flex-start
+        flex-direction: column
+        max-height: 300px
+        overflow: hidden
+        position: relative
+        min-height: 350px
+        padding: 40px
+
+        img
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            width: 100%
+            z-index: 9
+
+        h2
+            z-index: 99
+            margin: 0
+            font-size: 42px
+            font-weight: 900
+            color: $color-principal
+            background-color: black
+            padding: 12px
+            margin-top: 4px

@@ -1,0 +1,89 @@
+.products-section
+    width: 100%
+    +flex-center
+    gap: 40px
+    margin-top: 40px
+    margin-bottom: 40px
+
+    .container
+        +flex-center
+        position: relative
+        min-height: 350px
+        gap: 20px
+    
+    .products-container
+        width: 100%
+        flex-wrap: wrap
+        .product-card
+            max-width: 170px
+            padding: 4px
+            border-radius: 32px
+            +flex-center
+            align-self: stretch
+            +sm
+                max-width: 400px
+                padding: 16px
+                box-shadow: 6px 0px 8px rgba(125, 16, 92, 0.05)
+
+
+            .card-header
+                width: 100%
+                max-width: 120px
+                border-radius: 24px
+                overflow: hidden
+                box-shadow: 6px 0px 8px rgba(0, 0, 0, 0.15)
+                transition: width 0.5s ease-in-out
+                img
+                    width: 100%
+                    display: block
+                    transition: width 0.5s ease-in-out
+                    filter: grayscale(1)
+
+                    &:hover
+                        animation: width-imagen 1s
+                        filter: grayscale(0)
+                        width: 150px
+
+
+            .card-body
+                padding: 12px
+                width: auto
+                max-width: 200px
+                padding-left: 32px
+
+                .product-name
+                    margin: 0
+                    font-size: 24px
+                .description
+                    margin-top: 0
+                    margin-bottom: 4px
+                .price
+                    font-size: 24px
+                    margin: 0
+
+    .button-container
+        width: 100%
+        +flex-center
+        button
+            color: $color-principal
+            background-color: rgba(0, 0, 0, 0)
+            border: 2px solid $color-principal
+            padding: 12px 24px
+            border-radius: 12px
+            font-size: 16px
+
+            &:hover
+                color: white
+                background-color: $color-principal
+                cursor: pointer
+
+
+
+@keyframes width-imagen
+    0%
+        filter: grayscale(1)
+        width: 120px
+    100%
+        filter: grayscale(0)
+        width: 150px
+        
