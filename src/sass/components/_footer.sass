@@ -2,8 +2,10 @@ footer
     width: 100%
     +flex-center
     background-color: $color-principal
-    padding: 40px 100px 12px 100px
+    padding: 20px
     border-top: 8px solid black
+    +md
+        padding: 40px 100px 12px 100px
 
     .descripcion
         align-self: flex-end
@@ -12,11 +14,13 @@ footer
 
     .redes
         width: 100%
-        +flex-all(flex-start, center)
+        +flex-center
         gap: 8px
         font-size: 24px
         font-weight: 900
         color: white
+        +md
+            +flex-all(flex-start, center)
 
         img
             width: 30px
